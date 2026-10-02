@@ -5,7 +5,7 @@ import generateToken from "../config/generateToken.js";
 const registerUser = async (
   email: string,
   password: string,
-  displayName: string
+  displayName: string,
 ) => {
   // Check whether the email is already registered
   const existingUser = await User.findOne({ email });
@@ -25,14 +25,11 @@ const registerUser = async (
   });
 
   const token = generateToken(user._id.toString());
-  
-  return user;
+
+  return { user, token };
 };
 
-const loginUser = async (
-  email: string,
-  password: string
-) => {
+const loginUser = async (email: string, password: string) => {
   // Find the user by email
   const user = await User.findOne({ email });
 
@@ -42,10 +39,7 @@ const loginUser = async (
 
   // Compare the password provided by the user
   // with the hashed password stored in MongoDB
-  const isPasswordCorrect = await bcrypt.compare(
-    password,
-    user.passwordHash
-  );
+  const isPasswordCorrect = await bcrypt.compare(password, user.passwordHash);
 
   if (!isPasswordCorrect) {
     throw new Error("Invalid email or password");
@@ -56,7 +50,9 @@ const loginUser = async (
 
   await user.save();
 
-  return user;
+  const token = generateToken(user._id.toString());
+
+  return { user, token };
 };
 
-export { registerUser,loginUser  };
+export { registerUser, loginUser };
