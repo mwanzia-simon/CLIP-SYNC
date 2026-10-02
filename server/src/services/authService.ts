@@ -56,4 +56,4 @@ const loginUser = async (
   return user;
 };
 
-export { registerUse,loginUser  };
+export { registerUser,loginUser  };
