@@ -5,11 +5,7 @@ const register = async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password, displayName } = req.body;
 
-    const user = await registerUser(
-      email,
-      password,
-      displayName
-    );
+    const { user } = await registerUser(email, password, displayName);
 
     res.status(201).json({
       message: "User registered successfully",
@@ -20,14 +16,9 @@ const register = async (req: Request, res: Response): Promise<void> => {
         isVerified: user.isVerified,
       },
     });
-
-    
   } catch (error) {
     res.status(400).json({
-      message:
-        error instanceof Error
-          ? error.message
-          : "Registration failed",
+      message: error instanceof Error ? error.message : "Registration failed",
     });
   }
 };
@@ -36,7 +27,7 @@ const login = async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password } = req.body;
 
-    const user = await loginUser(email, password);
+    const { user } = await loginUser(email, password);
 
     res.status(200).json({
       message: "Login successful",
@@ -49,10 +40,7 @@ const login = async (req: Request, res: Response): Promise<void> => {
     });
   } catch (error) {
     res.status(401).json({
-      message:
-        error instanceof Error
-          ? error.message
-          : "Login failed",
+      message: error instanceof Error ? error.message : "Login failed",
     });
   }
 };
