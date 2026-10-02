@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs";
 import User from "../models/User.js";
+import generateToken from "../config/generateToken.js";
 
 const registerUser = async (
   email: string,
@@ -23,6 +24,8 @@ const registerUser = async (
     displayName,
   });
 
+  const token = generateToken(user._id.toString());
+  
   return user;
 };
 
