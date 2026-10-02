@@ -20,6 +20,8 @@ const register = async (req: Request, res: Response): Promise<void> => {
         isVerified: user.isVerified,
       },
     });
+
+    
   } catch (error) {
     res.status(400).json({
       message:
