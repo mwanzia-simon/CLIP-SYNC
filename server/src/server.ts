@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDatabase from "./config/database.js";
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/userRouter.js";
+import authRouter from "./routes/authRouter.js";
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/users", userRouter);
+app.use("/api/auth", authRouter);
 
 app.get("/", (_req, res) => {
   res.json({
