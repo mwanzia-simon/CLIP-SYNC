@@ -12,7 +12,7 @@ ClipSync is designed for situations where you quickly need to transfer text, lin
 
 ---
 
-## 🚀 Why ClipSync?
+##  Why ClipSync?
 
 Moving small pieces of information between devices can be surprisingly inconvenient.
 
@@ -24,11 +24,11 @@ Instead, your devices can share a synchronized clipboard.
 
 ---
 
-## ✨ Version 1 Features
+##  Version 1 Features
 
 The first version of ClipSync will focus on the core clipboard-sharing experience.
 
-### 📋 Clipboard Synchronization
+###  Clipboard Synchronization
 
 Automatically synchronize clipboard text between paired devices.
 
@@ -48,7 +48,7 @@ Laptop
 Your application
 ```
 
-### 📱 Device Pairing
+###  Device Pairing
 
 Users can pair multiple devices with their ClipSync account.
 
@@ -60,7 +60,7 @@ Each paired device will have information such as:
 * Last seen
 * Pairing status
 
-### 🕘 Clipboard History
+###  Clipboard History
 
 Keep a history of recently synchronized clipboard items.
 
@@ -72,7 +72,7 @@ Users can:
 * Delete an item
 * Pin important items
 
-### 🔄 Sync Status
+###  Sync Status
 
 Users should be able to see whether ClipSync is currently connected and synchronizing.
 
@@ -88,7 +88,7 @@ or
 ○ Offline
 ```
 
-### 🔐 Authentication
+###  Authentication
 
 Users will have an account that allows their devices and clipboard data to be associated with them.
 
@@ -99,7 +99,7 @@ Authentication will support:
 * Logout
 * Protected resources
 
-### ⚙️ Settings
+###  Settings
 
 Users will be able to configure their ClipSync experience.
 
@@ -113,7 +113,7 @@ Initial settings include:
 
 ---
 
-## 🖥️ Planned Platforms
+##  Planned Platforms
 
 ClipSync is intended to work across multiple devices.
 
@@ -182,7 +182,7 @@ The current UI concept uses a **dark, modern interface with blue/purple accents*
 
 ---
 
-## 🏗️ High-Level Architecture
+##  High-Level Architecture
 
 ClipSync will use a client-server architecture.
 
@@ -219,7 +219,7 @@ The server will handle:
 
 ---
 
-## 🗄️ Core Data Models
+##  Core Data Models
 
 The initial database design will revolve around a few core entities.
 
@@ -288,7 +288,7 @@ The database structure may change as implementation progresses.
 
 ---
 
-## 🔒 Security & Privacy
+##  Security & Privacy
 
 Clipboard data can contain sensitive information, so security is a major part of ClipSync.
 
@@ -308,7 +308,7 @@ ClipSync should only synchronize clipboard data between devices authorized by th
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 The exact technology stack may evolve during development.
 
@@ -345,7 +345,7 @@ The project may use cloud infrastructure for:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 A possible monorepo structure:
 
@@ -382,7 +382,7 @@ This structure is only a starting point and can be adjusted as the project grows
 
 ---
 
-## 🔄 Basic Synchronization Flow
+##  Basic Synchronization Flow
 
 A typical synchronization flow will look like this:
 
@@ -420,7 +420,7 @@ Example:
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 ### Phase 1 — Foundation
 
@@ -473,7 +473,7 @@ Example:
 
 ---
 
-## 🎯 Project Goal
+##  Project Goal
 
 The goal of ClipSync is to make moving information between personal devices feel as natural as copying and pasting on the same device.
 
@@ -509,7 +509,7 @@ Paste
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 Project documentation will cover:
 
@@ -526,7 +526,7 @@ Project documentation will cover:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 ClipSync is currently under active development.
 
@@ -541,13 +541,13 @@ As the project evolves, contribution guidelines will be added covering:
 
 ---
 
-## 📄 License
+##  License
 
 License information will be added when the project reaches its initial public release.
 
 ---
 
-## 💡 Project Status
+##  Project Status
 
 **Status:** 🚧 Early Development
 
