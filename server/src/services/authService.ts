@@ -26,4 +26,34 @@ const registerUser = async (
   return user;
 };
 
-export { registerUser };
+const loginUser = async (
+  email: string,
+  password: string
+) => {
+  // Find the user by email
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new Error("Invalid email or password");
+  }
+
+  // Compare the password provided by the user
+  // with the hashed password stored in MongoDB
+  const isPasswordCorrect = await bcrypt.compare(
+    password,
+    user.passwordHash
+  );
+
+  if (!isPasswordCorrect) {
+    throw new Error("Invalid email or password");
+  }
+
+  // Update the user's last login time
+  user.lastLoginAt = new Date();
+
+  await user.save();
+
+  return user;
+};
+
+export { registerUse,loginUser  };
