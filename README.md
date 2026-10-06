@@ -132,7 +132,7 @@ The exact platform support may evolve as development progresses.
 
 ---
 
-## 🎨 UI / UX
+##  UI / UX
 
 ClipSync follows a clean, modern interface designed around one primary action:
 
@@ -549,7 +549,7 @@ License information will be added when the project reaches its initial public re
 
 ##  Project Status
 
-**Status:** 🚧 Early Development
+**Status:**  Early Development
 
 ClipSync is currently in the planning and architecture stage.
 
