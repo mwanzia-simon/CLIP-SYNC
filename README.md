@@ -1,4 +1,4 @@
-# ClipSync 🔗📋
+# ClipSync
 
 > **Copy once. Continue anywhere.**
 
